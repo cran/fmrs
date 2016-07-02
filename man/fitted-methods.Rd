@@ -20,7 +20,7 @@ fitted(object, ...)
 A numeric array of dimension-\code{nObs}-\code{nComp}
 }
 \description{
-Provides the fitted response of the fitted FMRs model from
+Provides the fitted response of the fitted \code{FMRs} model from
 an \code{\link{fmrsfit-class}}
 }
 \examples{

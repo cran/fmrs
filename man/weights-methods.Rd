@@ -21,7 +21,7 @@ A numeric array of dimension-\code{nObs}-\code{nComp}
 }
 \description{
 Provides the weights of fitted observations for
-each observation under all components of an FMRs model
+each observation under all components of an \code{FMRs} model
 }
 \examples{
 set.seed(1980)

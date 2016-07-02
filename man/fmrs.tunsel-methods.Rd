@@ -12,7 +12,8 @@ fmrs.tunsel(y, delta, x, nComp, ...)
 \S4method{fmrs.tunsel}{ANY}(y, delta, x, nComp, disFamily = "lnorm",
   initCoeff, initDispersion, initmixProp, penFamily = "lasso",
   lambRidge = 0, nIterEM = 2000, nIterNR = 2, conveps = 1e-08,
-  convepsEM = 1e-08, convepsNR = 1e-08, porNR = 2, gamMixPor = 1)
+  convepsEM = 1e-08, convepsNR = 1e-08, porNR = 2, gamMixPor = 1,
+  activeset, lambMCP, lambSICA)
 }
 \arguments{
 \item{y}{Responses (observations)}
@@ -26,7 +27,7 @@ fmrs.tunsel(y, delta, x, nComp, ...)
 \item{...}{Other possible options}
 
 \item{disFamily}{A sub-distribution family. The options
-are \code{"norm"} for FMR models,
+are \code{"norm"} for \code{FMR} models,
 \code{"lnorm"} for mixture of AFT regression models with Log-Normal
 sub-distributions, \code{"weibull"} for mixture of AFT regression
 models with Weibull sub-distributions,}
@@ -51,10 +52,10 @@ Regression or Elastic Net}
 
 \item{conveps}{A positive value for avoiding NaN in computing divisions}
 
-\item{convepsEM}{A positive value for treshold of convergence in
+\item{convepsEM}{A positive value for threshold of convergence in
 EM algorithm}
 
-\item{convepsNR}{A positive value for treshold of convergence in
+\item{convepsNR}{A positive value for threshold of convergence in
 NR algorithm}
 
 \item{porNR}{A positive interger for maximum number of searches in
@@ -63,6 +64,13 @@ NR algorithm}
 \item{gamMixPor}{Proportion of mixing parameters in the penalty. The
 value must be in the interval [0,1]. If \code{gamMixPor = 0}, the
 penalty structure is no longer mixture.}
+
+\item{activeset}{A matrix of zero-one that shows which intercepts and
+covariates are active in the fitted fmrs model}
+
+\item{lambMCP}{A positive numbers for \code{mcp}'s extra tuning parameter}
+
+\item{lambSICA}{A positive numbers for \code{sica}'s extra tuning parameter}
 }
 \value{
 An \code{\link{fmrstunpar-class}} that includes
@@ -127,7 +135,8 @@ Farhad Shokoohi <shokoohi@icloud.com>
 }
 \references{
 Shokoohi, F., Khalili, A., Asgharian, M. and Lin, S.
-    (2016 submitted) Variable Selection in Mixture of Survival Models
+    (2016 submitted) Variable Selection in Mixture of Survival Models for
+    Biomedical Genomic Studies
 }
 \seealso{
 Other lnorm..norm..weibull: \code{\link{fmrs.gendata}},

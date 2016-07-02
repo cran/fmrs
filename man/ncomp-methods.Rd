@@ -20,7 +20,7 @@ ncomp(object, ...)
 An integer value
 }
 \description{
-Provides the order of an FMRs model from
+Provides the order of an \code{FMRs} model from
 an \code{\link{fmrsfit-class}}
 }
 \examples{

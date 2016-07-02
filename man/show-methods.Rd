@@ -4,21 +4,32 @@
 \name{show}
 \alias{show}
 \alias{show,fmrsfit-method}
+\alias{show,fmrstunpar-method}
 \alias{show,show-method}
 \title{show method}
 \usage{
 show(object)
 
+show(object)
+
 \S4method{show}{fmrsfit}(object)
+
+\S4method{show}{fmrstunpar}(object)
 }
 \arguments{
-\item{object}{An \code{\link{fmrsfit-class}}}
+\item{object}{An \code{\link{fmrsfit-class}} or  \code{\link{fmrstunpar-class}}}
+
+\item{...}{Other possible arguments}
 }
 \value{
-Information about the fitted FMRs model
+Information about the fitted \code{FMRs} model
+
+Information about the selected tuning parameters
 }
 \description{
-Provides information about the fitted FMRs model
+Provides information about the fitted \code{FMRs} model
+
+Provides information about the selected tuning parameters
 }
 \examples{
 set.seed(1980)
@@ -43,8 +54,17 @@ res.mle <- fmrs.mle(y = dat$y, x = dat$x, delta = dat$delta,
                    initDispersion = rep(1, nComp),
                    initmixProp = rep(1/nComp, nComp))
 show(res.mle)
+res.lam <- fmrs.tunsel(y = dat$y, x = dat$x, delta = dat$delta,
+                      nComp = nComp, disFamily = "lnorm",
+                      initCoeff = c(coefficients(res.mle)),
+                      initDispersion = dispersion(res.mle),
+                      initmixProp = mixProp(res.mle),
+                      penFamily = "adplasso")
+show(res.lam)
 }
 \author{
+Farhad Shokoohi <shokoohi@icloud.com>
+
 Farhad Shokoohi <shokoohi@icloud.com>
 }
 

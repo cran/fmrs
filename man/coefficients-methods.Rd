@@ -21,7 +21,7 @@ A numeric array of dimension-\code{(nCov+1)}-\code{nComp}
 }
 \description{
 Provides the estimated regression coefficients from the
-fitted FMRs model from an \code{\link{fmrsfit-class}}
+fitted \code{FMRs} model from an \code{\link{fmrsfit-class}}
 }
 \examples{
 set.seed(1980)

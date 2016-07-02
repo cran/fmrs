@@ -20,7 +20,7 @@ ncov(object, ...)
 An integer value
 }
 \description{
-Provides the number of covariates of an FMRs model from
+Provides the number of covariates of an \code{FMRs} model from
 an \code{\link{fmrsfit-class}}
 }
 \examples{

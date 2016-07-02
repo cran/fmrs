@@ -20,8 +20,8 @@ nobs(object, ...)
 An integer value
 }
 \description{
-Provides the number of observations in
-an \code{\link{fmrsfit-class}}
+Provides the number of observations in an \code{FMRs} model
+from an \code{\link{fmrsfit-class}}
 }
 \examples{
 set.seed(1980)

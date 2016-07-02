@@ -20,8 +20,8 @@ dispersion(object, ...)
 A numeric array of dimension-\code{(nCov+1)}-\code{nComp}
 }
 \description{
-Provides the estimated dispersions of the fitted FMRs model
-from from an \code{\link{fmrsfit-class}}
+Provides the estimated dispersions of the fitted \code{FMRs} model
+from an \code{\link{fmrsfit-class}}
 }
 \examples{
 set.seed(1980)

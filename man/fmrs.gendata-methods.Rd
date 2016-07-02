@@ -13,20 +13,19 @@ fmrs.gendata(nObs, nComp, nCov, coeff, dispersion, mixProp, rho, umax, ...)
   umax, disFamily = "lnorm")
 }
 \arguments{
-\item{nObs}{A numeric value represents number of observations (sample size)}
+\item{nObs}{A numeric value represents sample size}
 
-\item{nComp}{A numeric value represents the order (number of components)
-of an FMRs model}
+\item{nComp}{A numeric value represents the order mixture in \code{FMRs} model}
 
-\item{nCov}{A numberic value represents the number of covariates in
+\item{nCov}{A numeric value represents the number of covariates in
 design matrix}
 
 \item{coeff}{A vector of all regression coefficients including
 intercepts. It must be a vector of length
-\code{nComp} by \code{nCov+1}.}
+\code{nComp} *(\code{nCov+1}).}
 
 \item{dispersion}{A vector of positive values for dispersion parameters of
-sub-distributions in FMRs models}
+sub-distributions in \code{FMRs} models}
 
 \item{mixProp}{A vector of mixing proportions which their sum must be one}
 
@@ -39,8 +38,9 @@ distribution for censoring}
 \item{...}{Other possible options}
 
 \item{disFamily}{A sub-distribution family. The options
-are \code{"lnormal"} for Log-Normal, \code{"norm"} for Normal and
-\code{"weibull"} for Weibull.}
+are \code{"norm"} for \code{FMR} models, \code{"lnorm"} for mixture of AFT
+regression models with Log-Normal sub-distributions,\code{"weibull"}
+for mixture of AFT regression models with Weibull sub-distributions}
 }
 \value{
 A list including reponse, covariates and cenroing variables

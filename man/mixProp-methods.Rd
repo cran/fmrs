@@ -20,7 +20,7 @@ mixProp(object, ...)
 A numeric vector of length-\code{nComp}
 }
 \description{
-Provides the estimated mixing proportions of an FMRs model
+Provides the estimated mixing proportions of an \code{FMRs} model
     form an \code{\link{fmrsfit-class}}
 }
 \examples{

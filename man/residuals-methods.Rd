@@ -20,7 +20,7 @@ residuals(object, ...)
 A numeric array of dimension-\code{nObs}-\code{nComp}
 }
 \description{
-Provides the residuals of the fitted FMRs model from
+Provides the residuals of the fitted \code{FMRs} model from
 an \code{\link{fmrsfit-class}}
 }
 \examples{

@@ -20,7 +20,7 @@ BIC(object, ...)
 A numeric value
 }
 \description{
-Provides the estimated BIC of an FMRs model from
+Provides the estimated BIC of an \code{FMRs} model from
 an \code{\link{fmrsfit-class}}
 }
 \examples{

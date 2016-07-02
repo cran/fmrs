@@ -20,7 +20,7 @@ logLik(object, ...)
 A numeric value
 }
 \description{
-Provides the estimated logLikelihood of an FMRs model from
+Provides the estimated logLikelihood of an \code{FMRs} model from
     an \code{\link{fmrsfit-class}}
 }
 \examples{
